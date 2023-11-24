@@ -1,0 +1,41 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  height: 72px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  font-family: PFBeauSansPro;
+  z-index: 99999;
+}
+header ul.menu {
+  gap: 30px;
+  color: #333;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+}
+header ul.menu li {
+  padding: 0 16px;
+}
+header ul.menu li a {
+  transition: all 0.5s;
+}
+header ul.menu li a:hover {
+  color: #ea0033;
+  font-weight: 700;
+}
+header ul.menu li.active a {
+  color: #ea0033;
+  font-weight: 700;
+}
+header ul.menu li:last-child {
+  padding: 0;
+}
+
+main {
+  margin-top: 72px;
+}/*# sourceMappingURL=header.css.map */

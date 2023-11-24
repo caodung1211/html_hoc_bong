@@ -1,0 +1,50 @@
+@import "config";
+@import "footer";
+@import "header";
+@import "excellenc";
+
+
+.owl-dots {
+  position: absolute;
+  bottom: 39px;
+  left: 50%;
+  transform: translate(-50%,0);
+  margin: 0 !important;
+  display: flex;
+  gap: 24px;
+}
+.owl-theme .owl-dots .owl-dot{
+  span {
+    background: #D6D6D6;
+    width: 78px;
+    height: 6px;
+    border-radius: 50px;
+    transition: all 0.5s;
+  }
+  &.active span,&:hover span{
+    background: #EA0033;
+  }
+}
+
+.vt-breadcrumb{
+  padding: 36px 0 53px 0;
+  display: flex;
+  align-items: center;
+  gap: 21px;
+  color: #828282;
+  font-family: PFBeauSansPro;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%;
+text-transform: uppercase;
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 1440px){
+
+  
+}
+@media only screen and (min-width: 834px) and (max-width: 1440px){
+
+}

@@ -1,0 +1,41 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  height: 72px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  font-family: PFBeauSansPro;
+  z-index: 99999;
+  ul.menu {
+    gap: 30px;
+    color: #333;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    li {
+      padding: 0 16px;
+      a {
+        transition: all 0.5s;
+        &:hover {
+          color: #ea0033;
+          font-weight: 700;
+        }
+      }
+      &.active a {
+        color: #ea0033;
+        font-weight: 700;
+      }
+      &:last-child {
+        padding: 0;
+      }
+    }
+  }
+}
+
+main {
+  margin-top: 72px;
+}
