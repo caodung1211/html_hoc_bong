@@ -14,6 +14,9 @@ a {
   text-decoration: none;
   color: #000;
 }
+a:hover {
+  text-decoration: none !important;
+}
 
 p {
   margin: 0;
@@ -252,18 +255,19 @@ main {
 }
 
 .owl-theme .owl-dots .owl-dot span {
-  background: #D6D6D6;
+  background: #d6d6d6;
   width: 78px;
   height: 6px;
   border-radius: 50px;
   transition: all 0.5s;
 }
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
-  background: #EA0033;
+  background: #ea0033;
 }
 
 .vt-breadcrumb {
-  padding: 36px 0 53px 0;
+  padding-top: 36px;
+  padding-bottom: 53px;
   display: flex;
   align-items: center;
   gap: 21px;
@@ -274,4 +278,285 @@ main {
   font-weight: 400;
   line-height: 150%;
   text-transform: uppercase;
+}
+
+#s2 p.title {
+  color: #000;
+  font-family: PFBeauSansPro;
+  font-size: 46px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+#s2 ul.tab {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  justify-content: flex-end;
+}
+#s2 ul.tab li a {
+  border-radius: 100px;
+  border: 1px solid #a9a9a9;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 221px;
+  height: 43px;
+  color: #a9a9a9;
+  text-align: center;
+  font-family: Sarabun;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; /* 175% */
+  text-transform: uppercase;
+  transition: all 0.5s;
+  z-index: 2;
+  position: relative;
+  overflow: hidden;
+}
+#s2 ul.tab li a::before {
+  content: "";
+  background: #ea0033;
+  display: block;
+  width: 0%;
+  height: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s;
+  z-index: -1;
+}
+#s2 ul.tab li a:hover {
+  border: 1px solid #ea0033;
+  color: #fff;
+}
+#s2 ul.tab li a:hover::before {
+  width: 102%;
+  height: 120%;
+}
+#s2 ul.tab li svg {
+  cursor: pointer;
+}
+#s2 .title-tab {
+  position: relative;
+  margin-bottom: 95px;
+}
+#s2 p.excellence-desc {
+  padding-top: 26px;
+  color: #000;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  font-family: Sarabun;
+  margin-bottom: 18px;
+}
+#s2 .box-number {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 17px;
+  margin-top: 80px;
+}
+#s2 .box-number .number {
+  color: #ea0033;
+  font-family: PFBeauSansPro;
+  font-size: 61.028px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24.411px;
+  position: relative;
+}
+#s2 .box-number .number::before {
+  content: "";
+  width: 62px;
+  height: 62px;
+  display: block;
+  border-radius: 50%;
+  background: #f5f5f5;
+  position: absolute;
+  z-index: -1;
+  left: -36px;
+  bottom: -19px;
+}
+#s2 .box-number .number.number-1::before {
+  left: -20px;
+}
+#s2 .box-number .number-desc {
+  color: #000;
+  font-family: Sarabun;
+  font-size: 19.136px;
+  font-style: normal;
+  font-weight: 700;
+  max-width: 157px;
+  line-height: 24.411px;
+  display: block;
+}
+#s2 .box-hocbong {
+  padding: 0 35px;
+}
+#s2 .box-hocbong .box-text p {
+  color: #000;
+  font-family: Sarabun;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21.871px;
+  margin-bottom: 50px;
+}
+#s2 .btn-apply {
+  border-radius: 8px;
+  background: #ea0033;
+  color: #fff;
+  text-align: center;
+  font-family: PFBeauSansPro;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  width: 225px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+#s2 .btn-apply img {
+  position: absolute;
+  top: 50%;
+  right: 26px;
+  transform: translate(0, -50%);
+}
+#s2 .box-popup {
+  border-radius: 0px 0px 5px 5px;
+  border: 1px solid #d9d9d9;
+  background: #f5f5f5;
+  padding: 18px 15px 0 15px;
+  position: absolute;
+  top: 80px;
+  right: 0;
+  z-index: 9999999;
+  min-width: 290px;
+}
+#s2 .box-popup div {
+  border-bottom: 1px solid rgba(118, 118, 118, 0.6705882353);
+  padding-bottom: 15px;
+}
+#s2 .box-popup div p:nth-child(1) {
+  color: #a9a9a9;
+  font-family: PFBeauSansPro;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+#s2 .box-popup div p:nth-child(2) {
+  font-family: PFBeauSansPro;
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+#s2 .box-popup ul li a {
+  color: #a9a9a9;
+  font-family: Sarabun;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; /* 175% */
+  text-transform: uppercase;
+  padding: 19px 0;
+  display: inline-block;
+  border-bottom: 1px solid #a9a9a9;
+  width: 100%;
+}
+#s2 .box-popup ul li:last-child a {
+  border-bottom: none;
+}
+
+#s3 {
+  padding: 147px 0 97px 0;
+}
+#s3 .title {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+#s3 .title p {
+  min-width: 193px;
+  color: #1a1a1a;
+  text-align: center;
+  font-family: PFBeauSansPro;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  padding: 0 18px;
+  position: relative;
+  top: -22px;
+}
+#s3 .title svg {
+  width: calc((100% - 228px) / 2);
+}
+#s3 .title-small {
+  position: relative;
+  padding: 50px 0 69px 0;
+  text-align: center;
+}
+#s3 .title-small p {
+  color: #1a1a1a;
+  font-family: Sarabun;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  max-width: 793px;
+  display: inline-block;
+  text-align: center;
+  padding: 0 24px;
+  z-index: 11111;
+  position: relative;
+  background: #fff;
+}
+#s3 .title-small::before {
+  content: "";
+  background: #ea0033;
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 69px;
+}
+#s3 .box-card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+#s3 .box-card .card-1 {
+  border-radius: 10px;
+  background: #f5f5f5;
+  padding: 27px 16px;
+}
+#s3 .box-card .card-1 .icon {
+  margin-bottom: 27px;
+}
+#s3 .box-card .card-1 .icon .line {
+  width: 60px;
+  height: 5px;
+  display: block;
+  margin-top: 15px;
+  background: #ea0033;
 }/*# sourceMappingURL=scholarship_excellence.css.map */
