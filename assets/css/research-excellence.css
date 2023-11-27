@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -381,69 +380,6 @@ main {
   position: relative;
   margin-bottom: 95px;
 }
-#s2 .excellence-desc p {
-  padding-top: 26px;
-  color: #000;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 28px;
-  font-family: Sarabun;
-  margin-bottom: 18px;
-}
-#s2 .box-number {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin-bottom: 17px;
-  margin-top: 80px;
-}
-#s2 .box-number .number {
-  color: #ea0033;
-  font-family: PFBeauSansPro;
-  font-size: 61.028px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 24.411px;
-  position: relative;
-}
-#s2 .box-number .number::before {
-  content: "";
-  width: 62px;
-  height: 62px;
-  display: block;
-  border-radius: 50%;
-  background: #f5f5f5;
-  position: absolute;
-  z-index: -1;
-  left: -36px;
-  bottom: -19px;
-}
-#s2 .box-number .number.number-1::before {
-  left: -20px;
-}
-#s2 .box-number .number-desc {
-  color: #000;
-  font-family: Sarabun;
-  font-size: 19.136px;
-  font-style: normal;
-  font-weight: 700;
-  max-width: 157px;
-  line-height: 24.411px;
-  display: block;
-}
-#s2 .box-hocbong {
-  padding: 0 35px;
-}
-#s2 .box-hocbong .box-text p {
-  color: #000;
-  font-family: Sarabun;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 21.871px;
-  margin-bottom: 50px;
-}
 #s2 .btn-apply {
   border-radius: 8px;
   background: #ea0033;
@@ -521,212 +457,162 @@ main {
 #s2 .box-popup ul li:last-child a {
   border-bottom: none;
 }
+#s2 .box-text {
+  padding: 32px 51px 0 0;
+  color: #000;
+  font-family: Sarabun;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+#s2 ul.icon-ul {
+  padding: 35px 23px;
+}
+#s2 ul.icon-ul li {
+  display: flex;
+  align-items: start;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+#s2 ul.icon-ul li .icon img {
+  width: 30px;
+}
+#s2 ul.icon-ul li p {
+  max-width: 483px;
+}
 
 #s3 {
-  padding: 147px 0 97px 0;
+  padding: 124px 0 140px 0;
+  background-image: url("/assets/images/img_bg_research.svg");
+  background-position: 50% 34%;
+  background-repeat: no-repeat;
 }
-#s3 .title {
-  display: flex;
-  justify-content: center;
-  width: 100%;
+#s3 .box-text {
+  padding: 19px 0 9px 0;
 }
-#s3 .title p {
-  min-width: 193px;
+#s3 .box-text p:nth-child(1) {
   color: #1a1a1a;
-  text-align: center;
   font-family: PFBeauSansPro;
   font-size: 36px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  margin-bottom: 28px;
   text-transform: uppercase;
-  padding: 0 18px;
-  position: relative;
-  top: -22px;
+  background: #fff;
+  display: inline-block;
 }
-#s3 .title svg {
-  width: calc((100% - 228px) / 2);
-}
-#s3 .title-small {
-  position: relative;
-  padding: 50px 0 69px 0;
-  text-align: center;
-}
-#s3 .title-small p {
+#s3 .box-text p:nth-child(2) {
   color: #1a1a1a;
   font-family: Sarabun;
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
-  line-height: normal;
-  max-width: 793px;
-  display: inline-block;
-  text-align: center;
-  padding: 0 24px;
-  z-index: 11111;
-  position: relative;
   background: #fff;
+  line-height: normal;
 }
-#s3 .title-small::before {
-  content: "";
-  background: #ea0033;
-  height: 1px;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 69px;
+#s3 .object {
+  gap: 28px 25px;
 }
-#s3 .box-card {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+#s3 .object .box-object {
+  max-width: calc(50% - 13px);
 }
-#s3 .box-card .card-1 {
+#s3 .object .box-object .card-1 {
   border-radius: 10px;
   background: #f5f5f5;
-  padding: 27px 16px;
+  padding: 24px 36px 25px 36px;
+  min-height: 207px;
 }
-#s3 .box-card .card-1 .icon {
-  margin-bottom: 27px;
+#s3 .object .box-object .card-1 p {
+  color: #1A1A1A;
+  font-family: Sarabun;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
-#s3 .box-card .card-1 .icon .line {
+#s3 .object .box-object .card-1 .icon {
+  margin-bottom: 19px;
+}
+#s3 .object .box-object .card-1 .icon .line {
   width: 60px;
   height: 5px;
   display: block;
-  margin-top: 15px;
+  margin-top: 19px;
   background: #ea0033;
 }
 
 #s4 {
-  padding-bottom: 112px;
+  padding-bottom: 143px;
 }
-#s4 .title-small {
-  position: relative;
-  padding: 0 78px;
-  text-align: center;
-}
-#s4 .title-small p {
-  color: #1a1a1a;
-  text-align: center;
+#s4 .title {
+  color: #1A1A1A;
   font-family: PFBeauSansPro;
   font-size: 36px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
   text-transform: uppercase;
-  display: inline-block;
-  text-align: center;
-  padding: 0 58px;
-  z-index: 11111;
-  position: relative;
-  background: #fff;
+  margin-bottom: 32px;
 }
-#s4 .title-small p::before {
-  content: "";
-  background: #ea0033;
-  height: 6px;
-  width: 6px;
-  border-radius: 50%;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translate(0, -50%);
-}
-#s4 .title-small p::after {
-  content: "";
-  background: #ea0033;
-  height: 6px;
-  width: 6px;
-  border-radius: 50%;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translate(0, -50%);
-}
-#s4 .title-small::before {
-  content: "";
-  background: #ea0033;
-  height: 1px;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 23px;
-}
-#s4 .box-responsibility {
-  margin-top: 78px;
-  display: flex;
-  gap: 52px;
-  align-items: start;
-}
-#s4 .box-responsibility .box-text {
-  width: calc(100% - 164px);
-  border-radius: 10px;
-  border: 1px solid #d9d9d9;
-  padding: 39px 47px 9px 69px;
-  position: relative;
-  min-height: 333px;
-}
-#s4 .box-responsibility .box-text .before {
-  display: inline-block;
-  top: -1px;
-  position: absolute;
-  left: -36px;
-  z-index: 1;
-  background: #fff;
-}
-#s4 .box-responsibility .box-text.col-left p {
-  color: #1a1a1a;
+#s4 .title-small {
+  max-width: 486px;
+  color: #1A1A1A;
   text-align: justify;
   font-family: Sarabun;
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
-  line-height: normal;
-  margin-bottom: 21px;
+  line-height: 30px;
+  margin-bottom: 32px;
 }
-#s4 .box-responsibility .box-text.col-left ul {
-  color: #1a1a1a;
+#s4 .title-small b {
+  color: #EA0033;
   font-family: Sarabun;
-  font-size: 18px;
+  font-size: 45px;
   font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  list-style: disc;
-  padding-left: 30px;
+  font-weight: 600;
+  line-height: 30px;
 }
-#s4 .box-responsibility .box-text.col-left ul li {
-  margin-bottom: 13px;
+#s4 .responsibility {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 44px 90px;
 }
-#s4 .box-responsibility .box-text.col-right p {
-  color: #1a1a1a;
+#s4 .responsibility .box-icon {
+  background: #F5F5F5;
+  width: 61px;
+  height: 61px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+#s4 .responsibility p {
+  color: #1A1A1A;
   text-align: justify;
   font-family: Sarabun;
-  font-size: 18px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin-bottom: 13px;
 }
 
 @media only screen and (min-width: 320px) and (max-width: 1440px) {
-  /* scholarship_excellence.css | http://127.0.0.1:5500/assets/css/scholarship_excellence.css */
   #s2 ul.tab {
     flex-wrap: wrap;
     margin-top: 13px;
   }
   #s2 p.title {
-    /* font-size: 46px; */
-    font-size: 33px;
+    font-size: 20px;
   }
   #s2 .box-popup ul li a {
-    /* font-size: 16px; */
     font-size: 15px;
   }
   #s2 .title-tab {
-    /* margin-bottom: 95px; */
-    margin-bottom: 49px;
+    margin-bottom: 0;
   }
-  /* Trong dòng #4 | http://127.0.0.1:5500/excellence.html */
   #s2 ul.tab li {
     width: 100%;
   }
@@ -746,73 +632,86 @@ main {
   #s2 ul.tab > li:nth-child(3) {
     order: 4;
   }
-  .excellence-desc {
-    padding: 0;
-  }
   .vt-breadcrumb {
     gap: 11px;
-    font-size: 14px;
+    font-size: 12px;
     padding: 25px 15px;
   }
-  #s2 .box-number {
-    margin-bottom: 0;
-    margin-top: 20px;
+  #s2 .box-text {
+    padding: 0;
   }
-  #s2 .box-hocbong .box-text p {
-    margin-bottom: 21px;
+  #s2 .title-tab {
+    margin-bottom: 10px;
+  }
+  #s2 .btn-apply {
+    width: 100%;
+    margin-bottom: 25px;
   }
   #s3 {
-    padding: 60px 0 52px 0;
+    padding: 84px 0 80px 0;
+    background: none;
   }
-  #s3 .title p {
-    top: 0;
+  #s3 .object .box-object {
+    max-width: 100%;
   }
-  #s3 .title svg {
-    opacity: 0;
-  }
-  #s3 .title-small {
-    padding: 15px 0 45px 0;
-  }
-  #s3 .title-small p {
-    font-size: 18px;
-    padding: 0px 15px;
-  }
-  #s3 .box-card {
-    grid-template-columns: repeat(1, 1fr);
+  #s3 .object {
     padding: 0 15px;
   }
-  #s4 .title-small p {
-    padding: 0 23px;
+  #s3 .box-text {
+    text-align: center;
   }
-  #s4 .title-small {
-    padding: 0;
-  }
-  #s4 .title-small p::before {
-    left: 2px;
-    opacity: 0;
-  }
-  #s4 .title-small p::after {
-    opacity: 0;
-  }
-  #s4 .box-responsibility {
-    margin-top: 43px;
-    gap: 44px;
-    flex-wrap: wrap;
-  }
-  #s4 .box-responsibility .box-text {
-    width: 100%;
+  #s3 .object .box-object .card-1 {
     padding: 20px;
   }
-  #s4 .box-responsibility .box-text .before {
-    opacity: 0;
-  }
-  #s4 .box-responsibility img {
-    margin: 0 auto;
+  #s4 .title {
+    font-size: 32px;
+    margin-bottom: 7px;
   }
   #s4 .responsibility {
-    padding: 0;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 40px;
+  }
+  #s4 .responsibility .box-icon {
+    margin: 0 auto 10px auto;
+  }
+  #s2 .box-img img {
+    width: 100%;
+  }
+  #s4 .container {
+    padding: 0 15px;
+  }
+  #s4 .box-img img {
+    width: 100%;
   }
   .owl-dots {
     opacity: 0;
   }
-}/*# sourceMappingURL=scholarship_excellence.css.map */
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #s3 .object .box-object {
+    max-width: calc(50% - 13px);
+  }
+  #s3 .box-text {
+    text-align: left;
+  }
+  #s4 .responsibility {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 40px;
+  }
+  #s2 .col-12, #s4 .col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+  #s3 .object .box-object {
+    max-width: calc(50% - 13px);
+  }
+  #s4 .responsibility {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 0px;
+  }
+  #s4 .box-img img {
+    width: auto;
+  }
+}/*# sourceMappingURL=research-excellence.css.map */
