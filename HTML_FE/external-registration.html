@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viettel</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
+    <style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:hover {
+  text-decoration: none !important;
+}
+
+p {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1300px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: 0 auto;
+}
+
+.hidden-popup {
+  display: none;
+}
+
+@font-face {
+  font-family: PFBeauSansPro;
+  src: url(/assets/fonts/FS-PFBeauSansPro-Light.otf);
+}
+@font-face {
+  font-family: Sarabun;
+  src: url(/assets/fonts/Sarabun-Light.ttf);
+}
+.footer-block1 {
+  padding: 76px 0 126px 0;
+  background-image: url(images/bg_footer.png);
+}
+.footer-block1 p.title {
+  color: #fff;
+  text-align: center;
+  font-family: PFBeauSansPro;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 55px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  max-width: 510px;
+  margin: 0 auto;
+}
+.footer-block1 .box-round {
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  gap: 185px;
+  position: relative;
+}
+.footer-block1 .box-round .box-img {
+  background: #fff;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px auto;
+}
+.footer-block1 .box-round .box-text p {
+  color: #d9d9d9;
+  text-align: center;
+  font-family: PFBeauSansPro;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 29px;
+  text-transform: uppercase;
+  width: 215px;
+}
+.footer-block1 .box-round .line-dot {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 75px;
+  width: 54%;
+  justify-content: space-between;
+}
+.footer-block1 .box-round .line-dot .box-line {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.footer-block1 .box-round .line-dot .box-line .dot {
+  width: 9px;
+  height: 9px;
+  background: #d9d9d9;
+  border-radius: 50%;
+}
+.footer-block1 a.btn-apply {
+  color: #000;
+  height: 72px;
+  padding: 0 52px 0 25px;
+  text-align: center;
+  font-family: PFBeauSansPro;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  background: #fff;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+.footer-block1 a.btn-apply img {
+  position: absolute;
+  top: 50%;
+  right: 22px;
+  transform: translate(0, -50%);
+}
+
+.footer-block2 {
+  padding: 83px 0 20px 0;
+  gap: 14px;
+}
+.footer-block2 .col-left {
+  width: 100%;
+  max-width: 496px;
+}
+.footer-block2 .col-left .slogan {
+  margin-top: 7px;
+  color: #000;
+  font-family: PFBeauSansPro;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.footer-block2 .col-left a {
+  color: #000;
+  font-family: PFBeauSansPro;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.42px;
+  text-decoration-line: underline;
+  margin-bottom: 11px;
+  display: block;
+}
+.footer-block2 .col-left p.address {
+  color: #4c4c4c;
+  font-family: PFBeauSansPro;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 23px;
+}
+.footer-block2 .col-left ul {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #a9a9a9;
+  font-family: PFBeauSansPro;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+.footer-block2 .col-left ul a {
+  line-height: 28px;
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  text-decoration: none;
+  color: #a9a9a9;
+}
+.footer-block2 .col-right {
+  color: #000;
+  font-family: PFBeauSansPro;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.12px;
+  text-transform: uppercase;
+  width: calc(100% - 500px);
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1440px) {
+  .footer-block1 {
+    padding: 46px 0 76px 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .footer-block1 p.title {
+    font-size: 27px;
+    line-height: 45px;
+  }
+  .footer-block1 .box-round .line-dot {
+    display: none;
+  }
+  .footer-block1 .box-round {
+    padding: 20px 0;
+    gap: 39px;
+    flex-wrap: wrap;
+  }
+  .apply-now {
+    right: 10px;
+    bottom: 50px;
+  }
+  .apply-now img {
+    max-width: 70px;
+  }
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  height: 72px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  font-family: PFBeauSansPro;
+  z-index: 99999;
+}
+header ul.menu {
+  gap: 30px;
+  color: #333;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+}
+header ul.menu li {
+  padding: 0 16px;
+}
+header ul.menu li a {
+  transition: all 0.5s;
+}
+header ul.menu li a:hover {
+  color: #ea0033;
+  font-weight: 700;
+}
+header ul.menu li.active a {
+  color: #ea0033;
+  font-weight: 700;
+}
+header ul.menu li:last-child {
+  padding: 0;
+}
+
+main {
+  margin-top: 72px;
+}
+
+.vt-breadcrumb-register {
+  color: #676767;
+  font-family: Sarabun;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 26px;
+  margin: 40px auto 74px auto;
+}
+
+#register {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 125px;
+}
+#register .col-left {
+  width: calc(100% - 284px - 125px);
+}
+#register .col-left .box-input-flex {
+  display: flex;
+  gap: 24px;
+}
+#register .col-left .box-input-flex .box-input {
+  width: 50%;
+}
+#register .col-left .title-big p {
+  color: #000;
+  font-family: PFBeauSansPro;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 50px;
+}
+#register .col-left .title-big p::before {
+  content: "";
+  width: 29px;
+  height: 1.525px;
+  background: #e03;
+  display: block;
+  position: absolute;
+  bottom: 4px;
+  right: -47px;
+}
+#register .col-left .box-input {
+  display: flex;
+  align-items: end;
+  margin-bottom: 48px;
+  justify-content: space-between;
+}
+#register .col-left .box-input label {
+  width: 177px;
+  color: #000;
+  font-family: PFBeauSansPro;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0;
+  position: relative;
+  top: 6px;
+}
+#register .col-left .box-input label span {
+  color: #e03;
+}
+#register .col-left .box-input .input {
+  width: calc(100% - 177px);
+}
+#register .col-left .box-input .input.group-number {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+}
+#register .col-left .box-input .input.group-number input {
+  font-family: PFBeauSansPro;
+  width: 38px;
+  height: 38px;
+  border-radius: 5px;
+  border: 1px solid #d9d9d9;
+  background: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#register .col-left .box-input .input.group-text input {
+  color: #000;
+  width: 100%;
+  height: 38px;
+  font-family: Sarabun;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 26px;
+  text-transform: uppercase;
+  border: none;
+  border-bottom: 1px solid #d9d9d9;
+}
+#register .col-left .box-input .input-to {
+  position: relative;
+  max-width: 331px;
+}
+#register .col-left .box-input .input-to img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#register .col-left .note {
+  margin-bottom: 48px;
+  color: #676767;
+  font-family: Sarabun;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 24px; /* 150% */
+  background: #f2f2f2;
+  padding: 13px 19px;
+}
+#register .col-left .box-textarea p:nth-child(1) {
+  color: #000;
+  font-family: PFBeauSansPro;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 9px;
+}
+#register .col-left .box-textarea p:nth-child(2) {
+  color: #676767;
+  font-family: Sarabun;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 24px; /* 150% */
+  margin-bottom: 15px;
+}
+#register .col-left .box-textarea textarea {
+  margin-bottom: 40px;
+  border-radius: 5px;
+  border: 0.5px solid #ea0033;
+  background: #fff;
+  padding: 3px 13px;
+  width: 100%;
+  min-height: 152px;
+}
+#register .col-left .box-textarea.last textarea {
+  margin-bottom: 61px;
+}
+#register .col-left .ten-hocbong {
+  display: flex;
+  gap: 13px;
+  margin-bottom: 40px;
+}
+#register .col-left .ten-hocbong p {
+  width: 200px;
+  margin-bottom: 22px;
+  color: #000;
+  font-family: PFBeauSansPro;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+#register .col-left .ten-hocbong .box-checked {
+  width: calc(100% - 213px);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 39px 60px;
+}
+#register .col-left .ten-hocbong .box-checked .input-checked {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+#register .col-left .ten-hocbong .box-checked .input-checked .input-customize input[type=checkbox] {
+  display: none;
+}
+#register .col-left .ten-hocbong .box-checked .input-checked .input-customize label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 30px;
+  top: -16px;
+}
+#register .col-left .ten-hocbong .box-checked .input-checked .input-customize label::before {
+  content: url("");
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #ffffff;
+  text-align: center;
+  line-height: 16px;
+  color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d9d9d9;
+}
+#register .col-left .ten-hocbong .box-checked .input-checked .input-customize input[type=checkbox]:checked + label::before {
+  content: url("/images/icon_checked.svg");
+  border: none;
+  background: #ea0033;
+}
+#register .col-left .ten-hocbong .box-checked .input-checked .text-input {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+#register .col-left .ten-hocbong .box-checked .input-checked .text-input span:nth-child(1) {
+  color: #828282;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+#register .col-left .ten-hocbong .box-checked .input-checked .text-input span:nth-child(2) {
+  color: #000;
+  font-family: PFBeauSansPro;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+#register .col-left .chuongtrinh p.title {
+  color: #000;
+  font-family: PFBeauSansPro;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 40px;
+}
+#register .col-left .chuongtrinh .box-chuongtrinh-columns {
+  margin-top: 50px;
+  flex-direction: column;
+  align-items: start !important;
+  gap: 33px !important;
+  margin-bottom: 61px !important;
+}
+#register .col-left .chuongtrinh .box-chuongtrinh-columns .check-elect {
+  margin: 0 !important;
+}
+#register .col-left .chuongtrinh .box-chuongtrinh {
+  display: flex;
+  gap: 10px;
+  align-items: end;
+  margin-bottom: 23px;
+}
+#register .col-left .chuongtrinh .box-chuongtrinh p {
+  width: 260px;
+  color: #000;
+  font-family: PFBeauSansPro;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+#register .col-left .chuongtrinh .box-chuongtrinh input {
+  width: calc(100% - 270px);
+  border: none;
+  padding: 0 6px;
+  height: 38px;
+  color: #000;
+  font-family: Sarabun;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 26px; /* 144.444% */
+  text-transform: uppercase;
+  border-bottom: 1px solid #d9d9d9;
+}
+#register .col-left .chuongtrinh .box-chuongtrinh .box-in {
+  position: relative;
+  width: calc(100% - 270px);
+  display: flex;
+}
+#register .col-left .chuongtrinh .box-chuongtrinh .box-in div {
+  width: 50%;
+  position: relative;
+}
+#register .col-left .chuongtrinh .box-chuongtrinh .box-in div img {
+  position: absolute;
+  top: 9px;
+  right: 20px;
+  z-index: 1;
+  cursor: pointer;
+}
+#register .col-left .chuongtrinh .box-chuongtrinh .box-in div input {
+  width: 100%;
+}
+#register .col-left .chuongtrinh .box-chuongtrinh .box-dolar {
+  position: relative;
+  width: calc(100% - 270px);
+}
+#register .col-left .chuongtrinh .box-chuongtrinh .box-dolar img {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+}
+#register .col-left .chuongtrinh .box-chuongtrinh .box-dolar input {
+  padding-left: 20px;
+  width: 100%;
+}
+#register .col-left .check-elect {
+  margin: 56px 0 88px 0;
+  display: flex;
+  gap: 91px;
+}
+#register .col-left .check-elect .box-elect {
+  display: flex;
+  gap: 25px;
+}
+#register .col-left .check-elect .input-customize input[type=radio] {
+  display: none;
+}
+#register .col-left .check-elect .input-customize label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 30px;
+  top: -16px;
+}
+#register .col-left .check-elect .input-customize label::before {
+  content: url("");
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #ffffff;
+  text-align: center;
+  line-height: 16px;
+  color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d9d9d9;
+}
+#register .col-left .check-elect .input-customize input[type=radio]:checked + label::before {
+  content: url("/images/icon_checked.svg");
+  border: none;
+  background: #ea0033;
+}
+#register .col-left .check-elect label {
+  color: #000;
+  font-family: PFBeauSansPro;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+#register .col-left .box-upload p {
+  color: #000;
+  font-family: PFBeauSansPro;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 10px;
+}
+#register .col-left .box-upload ul {
+  color: #676767;
+  font-family: PFBeauSansPro;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 30px;
+  padding-left: 28px;
+  list-style: disc;
+  margin-bottom: 38px;
+}
+#register .col-left .box-upload label {
+  border-radius: 2.364px;
+  border: 1.182px solid #767676;
+  background: #EFEFEF;
+  padding: 0 12px;
+  cursor: pointer;
+  height: 26px;
+  margin: 0;
+  min-width: 108px;
+  text-align: center;
+}
+#register .col-left .box-upload .upload {
+  display: flex;
+  gap: 72px;
+  margin-bottom: 133px;
+}
+#register .col-left .box-upload .upload input {
+  border-radius: 3px;
+  border: 0.5px solid #615c5c;
+  background: #FFF;
+  height: 26px;
+  width: 100%;
+}
+#register .col-right {
+  width: 284px;
+}
+#register .col-right.fixed {
+  transition-property: top; /*  Thiết lập thuộc tính width động nếu giá trị của nó thay đổi */
+  transition-duration: 0.5s;
+  position: fixed;
+  width: 284px;
+  background: #fff;
+  top: 20px;
+  left: calc(50% + 284px + 196px);
+  transform: translate(-50%, 0%);
+}
+#register .col-right a {
+  color: #fff;
+  text-align: center;
+  font-family: PFBeauSansPro;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px; /* 144.444% */
+  text-transform: uppercase;
+  border-radius: 16px;
+  background: #e03;
+  width: 100%;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+#register .col-right p.cancel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 62px;
+  border-radius: 16px;
+  border: 1px solid #e9e9e9;
+  margin-bottom: 35px;
+}
+#register .col-right hr {
+  background: #d9d9d9;
+  margin-bottom: 35px;
+}
+#register .col-right .box-text {
+  margin-bottom: 10px;
+}
+#register .col-right .box-text p {
+  color: #000;
+  font-family: PFBeauSansPro;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+#register .col-right ul li {
+  display: flex;
+  gap: 4px;
+}
+#register .col-right ul li p {
+  color: #000;
+  font-family: PFBeauSansPro;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 28px; /* 200% */
+}
+
+.footer-register {
+  background-image: url("images/img_bg_register.png");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  min-height: 376px;
+  position: relative;
+}
+.footer-register .text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 650px;
+}
+.footer-register .text p {
+  color: #fff;
+  font-family: Sarabun;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 30px;
+}
+.footer-register .text p b {
+  font-weight: 600;
+}
+.footer-register .text a {
+  color: #fff;
+  text-align: center;
+  font-family: PFBeauSansPro;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  width: 198px;
+  height: 48px;
+  border-radius: 8px;
+  background: #ea0029;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 12px;
+  position: relative;
+  margin-top: 45px;
+}
+.footer-register .text a img {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translate(0, -50%);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1440px) {
+  #register .col-left .box-input .input.group-number {
+    gap: 4px;
+  }
+  .vt-breadcrumb-register {
+    margin: 40px auto 34px auto;
+    padding: 0 15px;
+    display: grid;
+  }
+  #register {
+    padding: 0 15px;
+    gap: 30px;
+  }
+  #register .col-left {
+    width: 100%;
+  }
+  #register .col-left .box-input {
+    align-items: unset;
+    margin-bottom: 25px;
+    flex-direction: column;
+    gap: 20px;
+  }
+  #register .col-left .box-input .input {
+    width: 100%;
+  }
+  #register .col-left .title-big p::before {
+    display: none;
+  }
+  #register .col-left .title-big p {
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+  #register .col-left .ten-hocbong {
+    flex-direction: column;
+  }
+  #register .col-left .ten-hocbong p {
+    margin-bottom: 13px;
+  }
+  #register .col-left .ten-hocbong .box-checked {
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 21px;
+  }
+  #register .col-left .chuongtrinh .box-chuongtrinh {
+    align-items: unset;
+    flex-direction: column;
+  }
+  #register .col-left .chuongtrinh .box-chuongtrinh input {
+    width: 100%;
+  }
+  #register .col-left .chuongtrinh .box-chuongtrinh .box-in {
+    width: 100%;
+    flex-direction: column;
+    gap: 11px;
+  }
+  #register .col-left .chuongtrinh .box-chuongtrinh .box-in div {
+    width: 100%;
+  }
+  #register .col-left .chuongtrinh .box-chuongtrinh .box-dolar {
+    width: 100%;
+  }
+  #register .col-left .check-elect {
+    margin: 50px 0;
+    gap: 25px;
+    flex-direction: column;
+  }
+  #register .col-left .check-elect label {
+    font-size: 16px;
+  }
+  .footer-register .text p {
+    font-size: 18px;
+  }
+  .footer-register {
+    height: 473px;
+    padding: 30px 0;
+    background-size: cover;
+  }
+  #register .col-right {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  #register .col-left .box-input .input.group-number {
+    gap: 4px;
+  }
+  #register .col-left .box-input label {
+    width: 100% !important;
+  }
+  #register .col-left .box-input .input {
+    width: 100% !important;
+  }
+  #register .col-left .box-input-flex {
+    gap: 8px;
+    flex-direction: column;
+  }
+  #register .col-left .box-input-flex .box-input {
+    width: 100%;
+  }
+  #register .col-left .box-upload .upload {
+    gap: 20px;
+    margin-bottom: 40px;
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .vt-breadcrumb-register {
+    display: block;
+  }
+  #register .col-left .box-input {
+    flex-direction: unset;
+  }
+  #register .col-left .ten-hocbong .box-checked {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #register .col-left .chuongtrinh .box-chuongtrinh .box-in div {
+    width: 50%;
+  }
+  #register .col-left .chuongtrinh .box-chuongtrinh .box-in {
+    flex-direction: unset;
+    gap: 0;
+  }
+  #register .col-left .check-elect {
+    flex-direction: unset;
+  }
+  #register .col-left .box-upload .upload {
+    flex-direction: unset;
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+  .vt-breadcrumb-register {
+    display: block;
+  }
+  #register .col-left {
+    width: calc(100% - 284px - 125px);
+  }
+  #register .col-right {
+    width: 284px;
+  }
+}/*# sourceMappingURL=external-registration.css.map */
+    </style>
+  </head>
+
+  <body>
+    <main>
+        <div class="vt-breadcrumb-register container">
+            <span style="color: #EA0033;">Viettel Excellence Scholarship</span> • <span>Đơn đăng ký</span> • <span>Dành cho Nhân sự xuất sắc Viettel </span>
+          </div>
+
+      <section id="register" class="container">
+       
+        <div class="col-left">
+          <div class="">
+            <div class="title-big">
+              <p>Thông tin cá nhân</p>
+            </div>
+            
+            <div class="box-input">
+              <label for="">Mã nhân viên <span>*</span></label>
+              <div class="input group-number">
+                <input type="number" data-id="1">
+                <input type="number" data-id="2">
+                <input type="number" data-id="3">
+                <input type="number" data-id="4">
+                <input type="number" data-id="5">
+                <input type="number" data-id="6">
+                <input type="number" data-id="7">
+              </div>
+            </div>
+
+            <div class="box-input">
+              <label for="">Họ và tên <span>*</span></label>
+              <div class="input group-text">
+                <input type="text" data-id="1">
+              </div>
+            </div>
+
+            <div class="box-input">
+              <label for="">Ngày sinh <span>*</span></label>
+              <div class="input group-text">
+                <div class="input-to">
+                  <input type="text" class="dataFormat" size="30" id="birthday"/>
+                  <img src="images/icon_datePicker.svg" class="birthday">
+                </div>
+              </div>
+            </div>
+
+            <div class="box-input">
+              <label for="">Số điện thoại <span>*</span></label>
+              <div class="input group-text">
+                <input type="tel" data-id="1">
+              </div>
+            </div>
+
+            <div class="box-input">
+              <label for="">Email <span>*</span></label>
+              <div class="input group-text">
+                <input type="email" data-id="1">
+              </div>
+            </div>
+
+            <div class="box-input">
+              <label for="" style="width: 200px;">Trường đào tạo Đại học <span>*</span></label>
+              <div class="input group-text" style="width: calc(100% - 245px);">
+                <input type="text" data-id="1">
+              </div>
+            </div>
+
+            <div class="box-input">
+              <label for="" style="width: 223px;">Chuyên ngành tạo Đại học <span>*</span></label>
+              <div class="input group-text" style="width: calc(100% - 265px);">
+                <input type="email" data-id="1">
+              </div>
+            </div>
+
+            <div class="box-input-flex">
+              <div class="box-input">
+                <label for="" style="width: 197px;">CPA tốt nghiệp Đại học <span>*</span></label>
+                <div class="input group-text" style="width: calc(100% - 242px);">
+                  <input type="email" data-id="1">
+                </div>
+              </div>
+  
+              <div class="box-input">
+                <label for="" style="width: 140px">Năm tốt nghiệp <span>*</span></label>
+                <div class="input group-text" style="width: calc(100% - 182px);">
+                  <input type="email" data-id="1">
+                </div>
+              </div>
+            </div>
+
+            <div class="box-input" style="margin-bottom: 76px;">
+              <label for="" style="width: 330px;">Công việc hiện tại (nghề nghiệp, đơn vị) <span>*</span></label>
+              <div class="input group-text" style="width: calc(100% - 375px);">
+                <input type="email" data-id="1">
+              </div>
+            </div>
+
+            <div class="title-big">
+              <p>Thành tích, giải thưởng</p>
+            </div>
+
+            <div class="box-textarea">
+              <p>Các đề tài/thành tích nổi bật trong học tập và nghiên cứu khoa học</p>
+              <p>(bao gồm thành tích thi Olympic, thi học sinh giỏi các cấp hoặc sáng chế, sáng kiến ý tưởng, bài báo khoa học, công trình nghiên cứu… được công nhận trong quá trình học tập, công tác)</p>
+              <div class="input">
+                <textarea name="" id="" placeholder="Nhập nội dung..."></textarea>
+              </div>
+            </div>
+
+            <div class="box-textarea last">
+              <p>Các bài báo khoa học, công trình nghiên cứu đã được công bố</p>
+              <div class="input">
+                <textarea name="" id="" placeholder="Nhập nội dung..."></textarea>
+              </div>
+            </div>
+
+            <div class="title-big">
+              <p>Chương trình đào tạo</p>
+            </div>
+
+            <div class="chuongtrinh">
+              <div class="box-chuongtrinh">
+                <p>Tên chương trình đào tạo</p>
+                <input type="text" placeholder="Tên chương trình đào đạo" value="Cyber security">
+              </div>
+
+              <div class="box-chuongtrinh">
+                <p>Trường đào tạo</p>
+                <input type="text" placeholder="Trường đào tạo" value="British Columbia">
+              </div>
+
+              <div class="box-chuongtrinh">
+                <p>Niên khóa</p>
+                <div class="box-in">
+                  <div class="input-from">
+                    <input type="text" placeholder="Từ ngày" class="dataFormat" size="30" id="fromDate"/>
+                    <img src="images/icon_datePicker.svg" class="fromDate">
+                  </div>
+                  <div class="input-to">
+                    <input type="text" placeholder="Đến ngày" class="dataFormat" size="30" id="toDate"/>
+                    <img src="images/icon_datePicker.svg" class="toDate">
+                  </div>
+                </div>
+              </div>
+
+              <div class="box-chuongtrinh box-chuongtrinh-columns">
+                <p>Hình thức học tập</p>
+                
+                <div class="check-elect">
+                  <div class="box-elect">
+                    <div class="input-customize">
+                      <input type="radio" name="elect" id="pass-elect">
+                      <label for="pass-elect"></label>
+                    </div>
+                    <label for="pass-elect">Đã trúng tuyển đầu vào</label>
+                  </div>
+                  <div class="box-elect">
+                    <div class="input-customize">
+                      <input type="radio" name="elect" id="none-elect">
+                      <label for="none-elect"></label>
+                    </div>
+                    <label for="none-elect">chưa trúng tuyển đầu vào</label>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="box-chuongtrinh">
+                <p>Đề tài nghiên cứu dự kiến</p>
+                <input type="text" placeholder="Đề tài nghiên cứu dự kiến" value="British Columbia">
+              </div>
+
+              <div class="box-chuongtrinh">
+                <p>Giảng viên hướng dẫn</p>
+                <input type="text" placeholder="Giảng viên hướng dẫn" value="British Columbia">
+              </div>
+
+
+            </div>
+
+            <div class="check-elect">
+              <div class="box-elect">
+                <div class="input-customize">
+                  <input type="radio" name="elect" id="pass-elect">
+                  <label for="pass-elect"></label>
+                </div>
+                <label for="pass-elect">Đã trúng tuyển đầu vào</label>
+              </div>
+              <div class="box-elect">
+                <div class="input-customize">
+                  <input type="radio" name="elect" id="none-elect">
+                  <label for="none-elect"></label>
+                </div>
+                <label for="none-elect">chưa trúng tuyển đầu vào</label>
+              </div>
+            </div>
+
+            <div class="title-big">
+              <p>Tài liệu đính kèm</p>
+            </div>
+
+            <div class="box-upload">
+              <p>Học viên upload các tài liệu dạng scan (vào 1 file nén)</p>
+              <ul>
+                <li>Bằng và Bảng điểm tốt nghiệp đại học</li>
+                <li>Quyết định công nhận học viên cao học (nếu có)</li>
+                <li>CV</li>
+                <li>Đề cương đề tài nghiên cứu dự kiến</li>
+                <li>Các minh chứng khác (nếu có)</li>
+              </ul>
+
+              <div class="upload">
+                <input type="text">
+                <label for="uploadfile">Chọn tệp</label>
+                <input type="file" name="" id="uploadfile" style="display: none;">
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-right">
+
+          <a href="#">Gửi đơn đăng ký</a>
+          <p class="cancel">hoàn tác</p>
+          <hr>
+          <div class="box-text">
+            <p>Ban Tuyển dụng <br> Tập đoàn Công nghệ - Viễn thông Quân đội Viettel</p>
+          </div>
+          <ul class="box-address">
+              <li>
+                <div class="icon">
+                  <img src="images/icon_address.svg">
+                </div>
+                <div class="icon-text">
+                  <p>Lô D26 Khu Đô thị mới Cầu Giấy, Phường Yên Hòa, Quận Cầu Giấy, Hà Nội</p>
+                </div>
+              </li>
+              <li>
+                <div class="icon">
+                  <img src="images/icon_earth.svg">
+                </div>
+                <div class="icon-text">
+                  <p>tuyendung@viettel.com.vn</p>
+                </div>
+              </li>
+          </ul>
+        </div>
+
+      </section>
+
+
+    <div class="footer-register">
+      <div class="text">
+        <p>
+          <b>Viettel Excellence Scholarship</b> là chương trình học bổng của Tập đoàn Công nghiệp – Viễn thông Quân đội (VIETTEL) nhằm phát triển nguồn nhân lực chất lượng cao trong các lĩnh vực công nghệ số cho xã hội.
+        </p>
+        <a href="#">tìm hiểu thêm <img src="images/icon_button-right_2.svg" alt=""></a>
+      </div>
+    </div>
+
+
+    </main>
+
+    <script>
+
+      $(document).ready(function () {
+
+        $(".dataFormat").datepicker({
+            dateFormat: 'dd/mm/yy',//check change
+            changeMonth: true,
+            changeYear: true
+        });
+      
+          $('.fromDate').click(function() {
+            $("#fromDate").focus();
+          });
+
+          $('.toDate').click(function() {
+            $("#toDate").focus();
+          });
+          $('.birthday').click(function() {
+            $("#birthday").focus();
+          });
+          
+
+
+          if ($(window).width() > 960) {
+            window.addEventListener("scroll", function () {
+              let fixedDiv = $(".col-right");
+              let offset = fixedDiv[0].offsetTop
+
+              if (window.pageYOffset > offset) {
+                fixedDiv.addClass("fixed");
+              } else {
+                fixedDiv.removeClass("fixed");
+              }
+            });
+          }
+         
+
+          
+
+      });
+
+
+    </script>
+  </body>
+</html>

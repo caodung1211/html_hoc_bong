@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viettel</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/scholarship.css">
+
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:hover {
+  text-decoration: none !important;
+}
+
+p {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1300px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: 0 auto;
+}
+
+.hidden-popup {
+  display: none;
+}
+
+@font-face {
+  font-family: PFBeauSansPro;
+  src: url(/assets/fonts/FS-PFBeauSansPro-Light.otf);
+}
+@font-face {
+  font-family: Sarabun;
+  src: url(/assets/fonts/Sarabun-Light.ttf);
+}
+.footer-block1 {
+  padding: 76px 0 126px 0;
+  background-image: url(images/bg_footer.png);
+}
+.footer-block1 p.title {
+  color: #fff;
+  text-align: center;
+  font-family: PFBeauSansPro;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 55px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  max-width: 510px;
+  margin: 0 auto;
+}
+.footer-block1 .box-round {
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  gap: 185px;
+  position: relative;
+}
+.footer-block1 .box-round .box-img {
+  background: #fff;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px auto;
+}
+.footer-block1 .box-round .box-text p {
+  color: #d9d9d9;
+  text-align: center;
+  font-family: PFBeauSansPro;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 29px;
+  text-transform: uppercase;
+  width: 215px;
+}
+.footer-block1 .box-round .line-dot {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 75px;
+  width: 54%;
+  justify-content: space-between;
+}
+.footer-block1 .box-round .line-dot .box-line {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.footer-block1 .box-round .line-dot .box-line .dot {
+  width: 9px;
+  height: 9px;
+  background: #d9d9d9;
+  border-radius: 50%;
+}
+.footer-block1 a.btn-apply {
+  color: #000;
+  height: 72px;
+  padding: 0 52px 0 25px;
+  text-align: center;
+  font-family: PFBeauSansPro;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  background: #fff;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+.footer-block1 a.btn-apply img {
+  position: absolute;
+  top: 50%;
+  right: 22px;
+  transform: translate(0, -50%);
+}
+
+.footer-block2 {
+  padding: 83px 0 20px 0;
+  gap: 14px;
+}
+.footer-block2 .col-left {
+  width: 100%;
+  max-width: 496px;
+}
+.footer-block2 .col-left .slogan {
+  margin-top: 7px;
+  color: #000;
+  font-family: PFBeauSansPro;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.footer-block2 .col-left a {
+  color: #000;
+  font-family: PFBeauSansPro;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.42px;
+  text-decoration-line: underline;
+  margin-bottom: 11px;
+  display: block;
+}
+.footer-block2 .col-left p.address {
+  color: #4c4c4c;
+  font-family: PFBeauSansPro;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 23px;
+}
+.footer-block2 .col-left ul {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #a9a9a9;
+  font-family: PFBeauSansPro;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+.footer-block2 .col-left ul a {
+  line-height: 28px;
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  text-decoration: none;
+  color: #a9a9a9;
+}
+.footer-block2 .col-right {
+  color: #000;
+  font-family: PFBeauSansPro;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.12px;
+  text-transform: uppercase;
+  width: calc(100% - 500px);
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1440px) {
+  .footer-block1 {
+    padding: 46px 0 76px 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .footer-block1 p.title {
+    font-size: 27px;
+    line-height: 45px;
+  }
+  .footer-block1 .box-round .line-dot {
+    display: none;
+  }
+  .footer-block1 .box-round {
+    padding: 20px 0;
+    gap: 39px;
+    flex-wrap: wrap;
+  }
+  .apply-now {
+    right: 10px;
+    bottom: 50px;
+  }
+  .apply-now img {
+    max-width: 70px;
+  }
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  height: 72px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  font-family: PFBeauSansPro;
+  z-index: 99999;
+}
+header ul.menu {
+  gap: 30px;
+  color: #333;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+}
+header ul.menu li {
+  padding: 0 16px;
+}
+header ul.menu li a {
+  transition: all 0.5s;
+}
+header ul.menu li a:hover {
+  color: #ea0033;
+  font-weight: 700;
+}
+header ul.menu li.active a {
+  color: #ea0033;
+  font-weight: 700;
+}
+header ul.menu li:last-child {
+  padding: 0;
+}
+
+main {
+  margin-top: 72px;
+}
+
+.apply-now {
+  position: fixed;
+  right: 60px;
+  bottom: 60px;
+  z-index: 9999999;
+  cursor: pointer;
+}
+
+.banner-top .banner-logo {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translate(0%, 0%);
+}
+.banner-top .icon-source {
+  position: absolute;
+  left: 50%;
+  bottom: 8%;
+  transform: translate(-50%, 0);
+}
+
+#s2 {
+  padding: 47px 0;
+}
+#s2 .box-text {
+  max-width: 592px;
+  color: #000;
+  font-family: Sarabun;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 250;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+#s2 .box-text p span {
+  font-weight: 500;
+}
+#s2 .text-footer {
+  color: #000;
+  font-family: Sarabun;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px; /* 142.857% */
+}
+#s2 .text-footer span {
+  color: #ea0033;
+}
+
+#s3 {
+  padding-bottom: 173px;
+}
+#s3 .box-img img {
+  width: 100%;
+}
+#s3 ul {
+  max-width: 580px;
+}
+#s3 ul li {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 7px;
+}
+#s3 ul li p {
+  color: #141719;
+  font-family: Sarabun;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 25px;
+}
+#s3 ul li p span {
+  font-size: 22px;
+}
+#s3 ul li .icon img {
+  max-width: 32px;
+}
+#s3 .box-btn {
+  padding: 41px 0;
+  display: grid;
+  gap: 17px 19px;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 471px;
+}
+#s3 .box-btn a {
+  color: #ea0033;
+  text-align: center;
+  font-family: Sarabun;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  text-transform: uppercase;
+  border-radius: 100px;
+  border: 1px solid #ea0033;
+  height: 43px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+  z-index: 2;
+  position: relative;
+  overflow: hidden;
+}
+#s3 .box-btn a::before {
+  content: "";
+  background: #ea0033;
+  display: block;
+  width: 0%;
+  height: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s;
+  z-index: -1;
+}
+#s3 .box-btn a:hover {
+  color: #fff;
+}
+#s3 .box-btn a:hover::before {
+  width: 102%;
+}
+#s3 a.btn-apply {
+  height: 48px;
+  border-radius: 8px;
+  background: #ea0033;
+  max-width: 225px;
+  color: #fff;
+  text-align: center;
+  font-family: PFBeauSansPro;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+#s3 a.btn-apply img {
+  position: absolute;
+  right: 26px;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+
+.home-title-for {
+  margin-bottom: 53px;
+}
+.home-title-for p {
+  max-width: 580px;
+  font-family: PFBeauSansPro;
+}
+.home-title-for p:nth-child(1) {
+  color: #a9a9a9;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.home-title-for p:nth-child(2) {
+  margin-top: 10px;
+  color: #000;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 23px;
+}
+.home-title-for p:nth-child(3) {
+  color: #000;
+  font-family: Sarabun;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+#s4 {
+  padding-bottom: 163px;
+}
+#s4 .box-img img {
+  width: 100%;
+}
+#s4 ul {
+  max-width: 580px;
+}
+#s4 ul li {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 7px;
+}
+#s4 ul li p {
+  color: #141719;
+  font-family: Sarabun;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 25px;
+}
+#s4 ul li p span {
+  font-size: 22px;
+}
+#s4 ul li .icon img {
+  max-width: 32px;
+}
+#s4 .box-btn {
+  padding: 36px 0;
+  display: flex;
+  width: 100%;
+  gap: 26px;
+}
+#s4 .box-btn a:nth-child(1) {
+  padding: 0 32px;
+  color: #ea0033;
+  text-align: center;
+  font-family: Sarabun;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  text-transform: uppercase;
+  border-radius: 100px;
+  border: 1px solid #ea0033;
+  height: 50px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+  z-index: 2;
+  position: relative;
+  overflow: hidden;
+  max-width: 296px;
+}
+#s4 .box-btn a:nth-child(1)::before {
+  content: "";
+  background: #ea0033;
+  display: block;
+  width: 0%;
+  height: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s;
+  z-index: -1;
+}
+#s4 .box-btn a:nth-child(1):hover {
+  color: #fff;
+}
+#s4 .box-btn a:nth-child(1):hover::before {
+  width: 102%;
+}
+#s4 .box-btn a.btn-apply {
+  height: 48px;
+  max-width: 225px;
+  border-radius: 8px;
+  background: #ea0033;
+  width: calc(100% - 270px);
+  color: #fff;
+  text-align: center;
+  font-family: PFBeauSansPro;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+#s4 .box-btn img {
+  position: absolute;
+  right: 26px;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1440px) {
+  .banner-top .banner-logo {
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+  }
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  #s2 {
+    padding: 30px 0;
+  }
+  #s2 .icon {
+    padding-right: 8px;
+  }
+  #s2 .icon svg {
+    top: 10px;
+    position: relative;
+  }
+  #s3 .box-btn {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #s3 a.btn-apply {
+    /* max-width: 225px; */
+    max-width: 100%;
+  }
+  #s4 .box-btn {
+    flex-wrap: wrap;
+  }
+  #s4 .box-btn a.btn-apply {
+    max-width: 100%;
+    width: 100%;
+  }
+  #s4 .box-btn a:nth-child(1) {
+    max-width: 100%;
+  }
+  #s3 {
+    padding-bottom: 73px;
+  }
+  #s4 {
+    padding-bottom: 63px;
+  }
+  .footer-block1 {
+    padding: 46px 0 76px 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .footer-block1 p.title {
+    font-size: 27px;
+    line-height: 45px;
+  }
+  .footer-block1 .box-round .line-dot {
+    display: none;
+  }
+  .apply-now {
+    right: 10px;
+    bottom: 50px;
+  }
+  .footer-block1 .box-round {
+    padding: 20px 0;
+    gap: 39px;
+    flex-wrap: wrap;
+  }
+  .apply-now img {
+    max-width: 70px;
+  }
+}
+@media only screen and (min-width: 834px) and (max-width: 1440px) {
+  .banner-top .banner-logo {
+    top: 25%;
+    transform: translate(0%, 0%);
+    width: unset;
+    max-width: 400px;
+  }
+}/*# sourceMappingURL=scholarship.css.map */
+    </style>
+    
+</head>
+<body>
+
+    <main>
+        <section id="s1" class="banner-top position-relative">
+            <div class="box-img">
+                <div style="background: #D9D9D9;height: 640px;">
+
+                </div>
+            </div>
+            <img src="images/img_text-banner.svg" class="banner-logo">
+
+            <div class="icon-source">
+                <svg xmlns="http://www.w3.org/2000/svg" width="78" height="41" viewBox="0 0 78 41" fill="none">
+                    <path d="M70.5089 20.7102L58.0042 14.2546C57.5305 14.0087 57.2463 13.7781 57.1515 13.5783C57.0568 13.3785 57 13.025 57 12.5331V8.87497C57 8.56756 57.0568 8.30626 57.1705 8.10645C57.2842 7.90663 57.5494 7.92198 57.9662 8.18328L76.4771 17.9281C76.9507 18.1741 77.2918 18.4354 77.5381 18.6967C77.7654 18.9579 77.8981 19.2961 77.9359 19.6957V21.2328C77.9359 21.8783 77.8033 22.3394 77.557 22.6007C77.3107 22.862 76.9507 23.1233 76.4771 23.3692L57.9662 33.1601C57.5494 33.4061 57.2842 33.4214 57.1705 33.2062C57.0568 32.9911 57 32.7144 57 32.3763V28.8103C57 28.38 57.0378 28.0572 57.1326 27.8574C57.2084 27.6576 57.4736 27.427 57.9284 27.1811L70.5089 20.7102Z" fill="#EC1B35"/>
+                    <path d="M7.42708 20.6169L19.9318 27.0724C20.4054 27.3184 20.6897 27.5489 20.7844 27.7487C20.8791 27.9485 20.9359 28.3021 20.9359 28.7939L20.9359 32.4521C20.9359 32.7595 20.8791 33.0208 20.7654 33.2206C20.6518 33.4204 20.3865 33.405 19.9697 33.1437L1.45886 23.3989C0.985198 23.153 0.644164 22.8917 0.397859 22.6304C0.170499 22.3691 0.0378888 22.0309 -4.45847e-06 21.6313L-4.29283e-06 20.0943C-4.22326e-06 19.4487 0.132646 18.9876 0.378952 18.7263C0.625257 18.465 0.985199 18.2037 1.45886 17.9578L19.9697 8.1669C20.3865 7.92097 20.6518 7.9056 20.7654 8.12079C20.8791 8.33597 20.9359 8.61261 20.9359 8.95075L20.9359 12.5167C20.9359 12.9471 20.8981 13.2698 20.8034 13.4696C20.7276 13.6695 20.4623 13.9 20.0076 14.1459L7.42708 20.6169Z" fill="#EC1B35"/>
+                    <path d="M43.0144 0.989916C43.1281 0.682509 43.2797 0.467318 43.4502 0.359725C43.6397 0.252133 43.9239 0.190674 44.3407 0.190674H47.6564C48.2627 0.190674 48.49 0.467354 48.3195 1.02069L35.3601 39.9999C35.2843 40.2766 35.1516 40.4764 35.0001 40.584C34.8485 40.6916 34.5832 40.7531 34.1853 40.7531H30.6992C30.4529 40.7531 30.2634 40.707 30.1118 40.584C29.9792 40.4764 29.9603 40.2459 30.074 39.9077L43.0144 0.989916Z" fill="#EC1B35"/>
+                </svg>
+            </div>
+        </section>
+
+        <section id="s2">
+           <div class="container row justify-content-end">
+            <div class="col-md-6 col-12">
+                <div class="box-text">
+                    <p>
+                        <b>Viettel Excellence Scholarship</b> là chương trình học bổng của Tập đoàn Công nghiệp – Viễn thông Quân đội (VIETTEL) nhằm phát triển nguồn nhân lực chất lượng cao trong các lĩnh vực công nghệ số cho xã hội.
+                    </p>
+                </div>
+
+                <div class="d-flex gap-13 text-footer">
+                    <div class="icon d-flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14" viewBox="0 0 11 14" fill="none">
+                            <path d="M10.0633 5.74206C10.9739 6.3335 10.9739 7.6665 10.0633 8.25794L2.31706 13.2893C1.31915 13.9374 2.88333e-07 13.2212 3.40346e-07 12.0313L7.80198e-07 1.96868C8.32211e-07 0.778755 1.31915 0.0625844 2.31706 0.710744L10.0633 5.74206Z" fill="#EA0033"/>
+                        </svg>
+                    </div>
+                    <p>Học bổng dành cho ứng viên <span>nội bộ</span> và <span>bên ngoài</span> Tập đoàn</p>
+                </div>
+            </div>
+           </div>
+        </section>
+
+        <section id="s3">
+            <div class="container excellent row">
+                <div class="col-md-6 col-12">
+                    <div class="box-img">
+                        <img src="images/img_excellent.png">
+                    </div>
+                </div>
+    
+                <div class="col-md-6 col-12">
+                    <div class="home-title-for">
+                        <p>Dành cho</p>
+                        <p>nhân sự Viettel xuất sắc</p>
+                        <p>Học bổng dành cho cho nhân sự tài năng Viettel trong các nhóm ngành trọng điểm hoặc nguồn cán bộ chủ chốt thuộc các cơ quan đơn vị trong Tập đoàn.</p>
+                    </div>
+                    <ul>
+                        <li>
+                            <div class="icon">
+                                <img src="images/icon_excellent_1.svg">
+                            </div>
+                            <div class="box-text">
+                                <p>
+                                    Được lựa chọn các chương trình đào tạo chất lượng cao của các trường được xếp hạng Top200 theo QS World University Rankings; hoặc chương trình đào tạo liên kết cấp bằng quốc tế top đầu tại Việt Nam.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <img src="images/icon_excellent_2.svg">
+                            </div>
+                            <div class="box-text">
+                                <p>
+                                    Số lượng học bổng: <span>40 suất/năm</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <img src="images/icon_excellent_3.svg">
+                            </div>
+                            <div class="box-text">
+                                <p>
+                                    Giá trị học bổng tại nước ngoài tối đa: <span>2,5 tỷ VNĐ/năm</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <img src="images/icon_excellent_4.svg">
+                            </div>
+                            <div class="box-text">
+                                <p>
+                                    Giá trị học bổng trong nước tối đa: <span>100 triệu VNĐ/năm</span>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+    
+                    <div class="box-btn">
+                        <a href="#">Viettel DX Excellence</a>
+                        <a href="#">Viettel Tech Forward</a>
+                        <a href="#">Viettel Future Leaders</a>
+                        <a href="#">Viettel Global Talent</a>
+                    </div>
+    
+                    <a href="#" class="btn-apply">
+                        Apply now
+                        <img src="images/icon_button-right.svg">
+                    </a>
+                </div>
+            </div>
+            
+        </section>
+        
+        <section id="s4">
+            <div class="container excellent row">
+                <div class="col-md-6 col-12">
+                    <div class="home-title-for">
+                        <p>Dành cho</p>
+                        <p>ứng viên bên ngoài</p>
+                        <p>Học bổng dành cho học viên chương trình đào tạo thạc sĩ định hướng nghiên cứu các chuyên ngành công nghệ cao tại các trường Đại học có hợp tác chiến lược với Viettel.</p>
+                    </div>
+                    <ul>
+                        <li>
+                            <div class="icon">
+                                <img src="images/icon_excellent_1.svg">
+                            </div>
+                            <div class="box-text">
+                                <p>
+                                    Giá trị học bổng lên tới <span>50 triệu đồng/năm</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <img src="images/icon_excellent_2.svg">
+                            </div>
+                            <div class="box-text">
+                                <p>
+                                    Số lượng học bổng: <span>30 suất/năm</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <img src="images/icon_excellent_3.svg">
+                            </div>
+                            <div class="box-text">
+                                <p>
+                                    Cơ hội tham gia nghiên cứu các đề tài thực tiễn tại Viettel
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <img src="images/icon_excellent_4.svg">
+                            </div>
+                            <div class="box-text">
+                                <p>
+                                    Ưu tiên tuyển dụng vào Viettel
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+    
+                    <div class="box-btn">
+                        <a href="#">Viettel Research ExcellencE</a>
+                        <a href="#" class="btn-apply">
+                            Apply now
+                            <img src="images/icon_button-right.svg">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-12">
+                    <div class="box-img">
+                        <img src="images/img_excellent_1.png">
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+        <div class="footer-block1">
+            <div class="container text-center">
+                <p class="title">
+                    chắp cánh tài năng công nghệ số việt nam
+                </p>
+
+                <div class="box-round">
+                    <div class="round">
+                        <div class="box-img">
+                            <img src="images/icon_round_1.svg">
+                        </div>
+                        <div class="box-text">
+                            <p>Vòng sơ loại</p>
+                        </div>
+                    </div>
+                    <div class="round">
+                        <div class="box-img">
+                            <img src="images/icon_round_2.svg">
+                        </div>
+                        <div class="box-text">
+                            <p>Vòng phỏng vấn</p>
+                        </div>
+                    </div>
+                    <div class="round">
+                        <div class="box-img">
+                            <img src="images/icon_round_3.svg">
+                        </div>
+                        <div class="box-text">
+                            <p>Thông báo kết quả & Trao tặng học bổng</p>
+                        </div>
+                    </div>
+                    <div class="line-dot">
+                        <div class="box-line">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <img src="images/icon_round_4.svg">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <div class="box-line">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <img src="images/icon_round_4.svg">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="btn-apply">
+                    Ứng tuyển ngay
+                    <img src="images/icon_button-right_1.svg">
+                </a>
+            </div>
+        </div>
+
+        <div class="apply-now">
+            <img src="assets//images/icon_applyNow.svg" >
+        </div>
+    </main>
+
+
+    <footer>
+        
+
+        <div class="footer-block2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-left">
+                        <a href="#">
+                            <img src="images/logo_footer.svg">
+                        </a>
+                        <p class="slogan">
+                            Tập đoàn Công nghiệp - Viễn thông quân đội 
+                        </p>
+                    </div>
+                    <div class="col-right">
+        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-left">
+                        <a href="mailto:Tuyendung@viettel.com.vn">
+                            Tuyendung@viettel.com.vn
+                        </a>
+                        <p class="address">
+                            Lô D26 Khu đô thị mới Cầu Giấy, Phường Yên Hòa,<br> Quận Cầu Giấy, Hà Nội, Việt Nam
+                        </p>
+        
+                        <ul class="copy-right">
+                            <li>
+                                <p>© VIETTEL 2022</p>
+                            </li>
+                            <li>
+                                <a href="#">CHÍNH SÁCH BẢO MẬT</a>
+                            </li>
+                            <li>
+                                <a href="#">ĐIỀU KHOẢN SỬ DỤNG</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-right">
+                        <div class="row">
+                            <div class="col-4">
+                                <ul class="menu-footer">
+                                    <li>
+                                        <a href="#">Về chúng tôi</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Tuyển dụng</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Đãi ngộ </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-4">
+                                <p class="title">
+                                    Theo dõi chúng tôi
+                                </p>
+                                <div class="box-social">
+                                    <a href="#">
+                                        <img src="images/icon_fb.svg">
+                                    </a>
+                                    <a href="#">
+                                        <img src="images/icon_yt.svg">
+                                    </a>
+                                    <a href="#">
+                                        <img src="images/icon_linkedin.svg">
+                                    </a>
+                                    <a href="#">
+                                        <img src="images/icon_instagram.svg">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <a href="#">
+                                    <img src="images/img_bct.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

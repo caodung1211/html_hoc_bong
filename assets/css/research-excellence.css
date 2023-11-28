@@ -34,6 +34,10 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
 }
 
+.hidden-popup {
+  display: none;
+}
+
 @font-face {
   font-family: PFBeauSansPro;
   src: url(/assets/fonts/FS-PFBeauSansPro-Light.otf);
@@ -373,7 +377,7 @@ main {
   width: 102%;
   height: 120%;
 }
-#s2 ul.tab li svg {
+#s2 ul.tab li img {
   cursor: pointer;
 }
 #s2 .title-tab {

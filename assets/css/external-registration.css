@@ -35,6 +35,10 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
 }
 
+.hidden-popup {
+  display: none;
+}
+
 @font-face {
   font-family: PFBeauSansPro;
   src: url(/assets/fonts/FS-PFBeauSansPro-Light.otf);
@@ -661,6 +665,20 @@ main {
   cursor: pointer;
   height: 26px;
   margin: 0;
+  min-width: 108px;
+  text-align: center;
+}
+#register .col-left .box-upload .upload {
+  display: flex;
+  gap: 72px;
+  margin-bottom: 133px;
+}
+#register .col-left .box-upload .upload input {
+  border-radius: 3px;
+  border: 0.5px solid #615c5c;
+  background: #FFF;
+  height: 26px;
+  width: 100%;
 }
 #register .col-right {
   width: 284px;
@@ -800,6 +818,9 @@ textarea:focus {
 }
 
 @media only screen and (min-width: 320px) and (max-width: 1440px) {
+  #register .col-left .box-input .input.group-number {
+    gap: 4px;
+  }
   .vt-breadcrumb-register {
     margin: 40px auto 34px auto;
     padding: 0 15px;
@@ -877,6 +898,27 @@ textarea:focus {
     width: 100%;
     padding-bottom: 20px;
   }
+  #register .col-left .box-input .input.group-number {
+    gap: 4px;
+  }
+  #register .col-left .box-input label {
+    width: 100% !important;
+  }
+  #register .col-left .box-input .input {
+    width: 100% !important;
+  }
+  #register .col-left .box-input-flex {
+    gap: 8px;
+    flex-direction: column;
+  }
+  #register .col-left .box-input-flex .box-input {
+    width: 100%;
+  }
+  #register .col-left .box-upload .upload {
+    gap: 20px;
+    margin-bottom: 40px;
+    flex-direction: column;
+  }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .vt-breadcrumb-register {
@@ -896,6 +938,9 @@ textarea:focus {
     gap: 0;
   }
   #register .col-left .check-elect {
+    flex-direction: unset;
+  }
+  #register .col-left .box-upload .upload {
     flex-direction: unset;
   }
 }

@@ -10,7 +10,9 @@
   z-index: 9999999;
   cursor: pointer;
 }
-
+.hidden {
+  display: none;
+}
 .owl-dots {
   position: absolute;
   bottom: 39px;
@@ -110,7 +112,7 @@
           }
         }
       }
-      svg {
+      img{
         cursor: pointer;
       }
     }
@@ -235,7 +237,6 @@
       transform: translate(0, -50%);
     }
   }
-
   .box-popup {
     border-radius: 0px 0px 5px 5px;
     border: 1px solid #d9d9d9;

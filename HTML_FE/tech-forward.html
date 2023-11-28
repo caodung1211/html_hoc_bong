@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viettel</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <style>
+      @charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:hover {
+  text-decoration: none !important;
+}
+
+p {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1300px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: 0 auto;
+}
+
+.hidden-popup {
+  display: none;
+}
+
+@font-face {
+  font-family: PFBeauSansPro;
+  src: url(/assets/fonts/FS-PFBeauSansPro-Light.otf);
+}
+@font-face {
+  font-family: Sarabun;
+  src: url(/assets/fonts/Sarabun-Light.ttf);
+}
+.footer-block1 {
+  padding: 76px 0 126px 0;
+  background-image: url(images/bg_footer.png);
+}
+.footer-block1 p.title {
+  color: #fff;
+  text-align: center;
+  font-family: PFBeauSansPro;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 55px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  max-width: 510px;
+  margin: 0 auto;
+}
+.footer-block1 .box-round {
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  gap: 185px;
+  position: relative;
+}
+.footer-block1 .box-round .box-img {
+  background: #fff;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px auto;
+}
+.footer-block1 .box-round .box-text p {
+  color: #d9d9d9;
+  text-align: center;
+  font-family: PFBeauSansPro;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 29px;
+  text-transform: uppercase;
+  width: 215px;
+}
+.footer-block1 .box-round .line-dot {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 75px;
+  width: 54%;
+  justify-content: space-between;
+}
+.footer-block1 .box-round .line-dot .box-line {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.footer-block1 .box-round .line-dot .box-line .dot {
+  width: 9px;
+  height: 9px;
+  background: #d9d9d9;
+  border-radius: 50%;
+}
+.footer-block1 a.btn-apply {
+  color: #000;
+  height: 72px;
+  padding: 0 52px 0 25px;
+  text-align: center;
+  font-family: PFBeauSansPro;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  background: #fff;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+.footer-block1 a.btn-apply img {
+  position: absolute;
+  top: 50%;
+  right: 22px;
+  transform: translate(0, -50%);
+}
+
+.footer-block2 {
+  padding: 83px 0 20px 0;
+  gap: 14px;
+}
+.footer-block2 .col-left {
+  width: 100%;
+  max-width: 496px;
+}
+.footer-block2 .col-left .slogan {
+  margin-top: 7px;
+  color: #000;
+  font-family: PFBeauSansPro;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.footer-block2 .col-left a {
+  color: #000;
+  font-family: PFBeauSansPro;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.42px;
+  text-decoration-line: underline;
+  margin-bottom: 11px;
+  display: block;
+}
+.footer-block2 .col-left p.address {
+  color: #4c4c4c;
+  font-family: PFBeauSansPro;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 23px;
+}
+.footer-block2 .col-left ul {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #a9a9a9;
+  font-family: PFBeauSansPro;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+.footer-block2 .col-left ul a {
+  line-height: 28px;
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  text-decoration: none;
+  color: #a9a9a9;
+}
+.footer-block2 .col-right {
+  color: #000;
+  font-family: PFBeauSansPro;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.12px;
+  text-transform: uppercase;
+  width: calc(100% - 500px);
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1440px) {
+  .footer-block1 {
+    padding: 46px 0 76px 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .footer-block1 p.title {
+    font-size: 27px;
+    line-height: 45px;
+  }
+  .footer-block1 .box-round .line-dot {
+    display: none;
+  }
+  .footer-block1 .box-round {
+    padding: 20px 0;
+    gap: 39px;
+    flex-wrap: wrap;
+  }
+  .apply-now {
+    right: 10px;
+    bottom: 50px;
+  }
+  .apply-now img {
+    max-width: 70px;
+  }
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  height: 72px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  font-family: PFBeauSansPro;
+  z-index: 99999;
+}
+header ul.menu {
+  gap: 30px;
+  color: #333;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+}
+header ul.menu li {
+  padding: 0 16px;
+}
+header ul.menu li a {
+  transition: all 0.5s;
+}
+header ul.menu li a:hover {
+  color: #ea0033;
+  font-weight: 700;
+}
+header ul.menu li.active a {
+  color: #ea0033;
+  font-weight: 700;
+}
+header ul.menu li:last-child {
+  padding: 0;
+}
+
+main {
+  margin-top: 72px;
+}
+
+.apply-now {
+  position: fixed;
+  right: 60px;
+  bottom: 60px;
+  z-index: 9999999;
+  cursor: pointer;
+}
+
+.owl-dots {
+  position: absolute;
+  bottom: 39px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin: 0 !important;
+  display: flex;
+  gap: 24px;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  background: #d6d6d6;
+  width: 78px;
+  height: 6px;
+  border-radius: 50px;
+  transition: all 0.5s;
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: #ea0033;
+}
+
+.vt-breadcrumb {
+  padding-top: 36px;
+  padding-bottom: 53px;
+  display: flex;
+  align-items: center;
+  gap: 21px;
+  color: #828282;
+  font-family: PFBeauSansPro;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+#s2 p.title {
+  color: #000;
+  font-family: PFBeauSansPro;
+  font-size: 46px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+#s2 ul.tab {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  justify-content: flex-end;
+}
+#s2 ul.tab li a {
+  border-radius: 100px;
+  border: 1px solid #a9a9a9;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 221px;
+  height: 43px;
+  color: #a9a9a9;
+  text-align: center;
+  font-family: Sarabun;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; /* 175% */
+  text-transform: uppercase;
+  transition: all 0.5s;
+  z-index: 2;
+  position: relative;
+  overflow: hidden;
+}
+#s2 ul.tab li a::before {
+  content: "";
+  background: #ea0033;
+  display: block;
+  width: 0%;
+  height: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s;
+  z-index: -1;
+}
+#s2 ul.tab li a:hover {
+  border: 1px solid #ea0033;
+  color: #fff;
+}
+#s2 ul.tab li a:hover::before {
+  width: 102%;
+  height: 120%;
+}
+#s2 ul.tab li img {
+  cursor: pointer;
+}
+#s2 .title-tab {
+  position: relative;
+  margin-bottom: 95px;
+}
+#s2 .excellence-desc p {
+  padding-top: 26px;
+  color: #000;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  font-family: Sarabun;
+  margin-bottom: 18px;
+}
+#s2 .box-number {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 17px;
+  margin-top: 80px;
+}
+#s2 .box-number .number {
+  color: #ea0033;
+  font-family: PFBeauSansPro;
+  font-size: 61.028px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24.411px;
+  position: relative;
+}
+#s2 .box-number .number::before {
+  content: "";
+  width: 62px;
+  height: 62px;
+  display: block;
+  border-radius: 50%;
+  background: #f5f5f5;
+  position: absolute;
+  z-index: -1;
+  left: -36px;
+  bottom: -19px;
+}
+#s2 .box-number .number.number-1::before {
+  left: -20px;
+}
+#s2 .box-number .number-desc {
+  color: #000;
+  font-family: Sarabun;
+  font-size: 19.136px;
+  font-style: normal;
+  font-weight: 700;
+  max-width: 157px;
+  line-height: 24.411px;
+  display: block;
+}
+#s2 .box-hocbong {
+  padding: 0 35px;
+}
+#s2 .box-hocbong .box-text p {
+  color: #000;
+  font-family: Sarabun;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21.871px;
+  margin-bottom: 50px;
+}
+#s2 .btn-apply {
+  border-radius: 8px;
+  background: #ea0033;
+  color: #fff;
+  text-align: center;
+  font-family: PFBeauSansPro;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  width: 225px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+#s2 .btn-apply img {
+  position: absolute;
+  top: 50%;
+  right: 26px;
+  transform: translate(0, -50%);
+}
+#s2 .box-popup {
+  border-radius: 0px 0px 5px 5px;
+  border: 1px solid #d9d9d9;
+  background: #f5f5f5;
+  padding: 18px 15px 0 15px;
+  position: absolute;
+  top: 80px;
+  right: 0;
+  z-index: 9999999;
+  min-width: 290px;
+}
+#s2 .box-popup div {
+  border-bottom: 1px solid rgba(118, 118, 118, 0.6705882353);
+  padding-bottom: 15px;
+}
+#s2 .box-popup div p:nth-child(1) {
+  color: #a9a9a9;
+  font-family: PFBeauSansPro;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+#s2 .box-popup div p:nth-child(2) {
+  font-family: PFBeauSansPro;
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+#s2 .box-popup ul li a {
+  color: #a9a9a9;
+  font-family: Sarabun;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; /* 175% */
+  text-transform: uppercase;
+  padding: 19px 0;
+  display: inline-block;
+  border-bottom: 1px solid #a9a9a9;
+  width: 100%;
+}
+#s2 .box-popup ul li:last-child a {
+  border-bottom: none;
+}
+
+#s3 {
+  padding: 147px 0 97px 0;
+}
+#s3 .title {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+#s3 .title p {
+  min-width: 193px;
+  color: #1a1a1a;
+  text-align: center;
+  font-family: PFBeauSansPro;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  padding: 0 18px;
+  position: relative;
+  top: -22px;
+}
+#s3 .title svg {
+  width: calc((100% - 228px) / 2);
+}
+#s3 .title-small {
+  position: relative;
+  padding: 50px 0 69px 0;
+  text-align: center;
+}
+#s3 .title-small p {
+  color: #1a1a1a;
+  font-family: Sarabun;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  max-width: 793px;
+  display: inline-block;
+  text-align: center;
+  padding: 0 24px;
+  z-index: 11111;
+  position: relative;
+  background: #fff;
+}
+#s3 .title-small::before {
+  content: "";
+  background: #ea0033;
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 69px;
+}
+#s3 .box-card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+#s3 .box-card .card-1 {
+  border-radius: 10px;
+  background: #f5f5f5;
+  padding: 27px 16px;
+}
+#s3 .box-card .card-1 .icon {
+  margin-bottom: 27px;
+}
+#s3 .box-card .card-1 .icon .line {
+  width: 60px;
+  height: 5px;
+  display: block;
+  margin-top: 15px;
+  background: #ea0033;
+}
+
+#s4 {
+  padding-bottom: 112px;
+}
+#s4 .title-small {
+  position: relative;
+  padding: 0 78px;
+  text-align: center;
+}
+#s4 .title-small p {
+  color: #1a1a1a;
+  text-align: center;
+  font-family: PFBeauSansPro;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  padding: 0 58px;
+  z-index: 11111;
+  position: relative;
+  background: #fff;
+}
+#s4 .title-small p::before {
+  content: "";
+  background: #ea0033;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+#s4 .title-small p::after {
+  content: "";
+  background: #ea0033;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+#s4 .title-small::before {
+  content: "";
+  background: #ea0033;
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 23px;
+}
+#s4 .box-responsibility {
+  margin-top: 78px;
+  display: flex;
+  gap: 52px;
+  align-items: start;
+}
+#s4 .box-responsibility .box-text {
+  width: calc(100% - 164px);
+  border-radius: 10px;
+  border: 1px solid #d9d9d9;
+  padding: 39px 47px 9px 69px;
+  position: relative;
+  min-height: 333px;
+}
+#s4 .box-responsibility .box-text .before {
+  display: inline-block;
+  top: -1px;
+  position: absolute;
+  left: -36px;
+  z-index: 1;
+  background: #fff;
+}
+#s4 .box-responsibility .box-text.col-left p {
+  color: #1a1a1a;
+  text-align: justify;
+  font-family: Sarabun;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 21px;
+}
+#s4 .box-responsibility .box-text.col-left ul {
+  color: #1a1a1a;
+  font-family: Sarabun;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  list-style: disc;
+  padding-left: 30px;
+}
+#s4 .box-responsibility .box-text.col-left ul li {
+  margin-bottom: 13px;
+}
+#s4 .box-responsibility .box-text.col-right p {
+  color: #1a1a1a;
+  text-align: justify;
+  font-family: Sarabun;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 13px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1440px) {
+  /* scholarship_excellence.css | http://127.0.0.1:5500/assets/css/scholarship_excellence.css */
+  #s2 ul.tab {
+    flex-wrap: wrap;
+    margin-top: 13px;
+  }
+  #s2 p.title {
+    /* font-size: 46px; */
+    font-size: 33px;
+  }
+  #s2 .box-popup ul li a {
+    /* font-size: 16px; */
+    font-size: 15px;
+  }
+  #s2 .title-tab {
+    /* margin-bottom: 95px; */
+    margin-bottom: 49px;
+  }
+  /* Trong dòng #4 | http://127.0.0.1:5500/excellence.html */
+  #s2 ul.tab li {
+    width: 100%;
+  }
+  #s2 ul.tab li#showPopupExcellence {
+    order: 1;
+    text-align: right;
+  }
+  #s2 .box-img img {
+    width: 100%;
+  }
+  #s2 ul.tab > li:nth-child(1) {
+    order: 2;
+  }
+  #s2 ul.tab > li:nth-child(2) {
+    order: 3;
+  }
+  #s2 ul.tab > li:nth-child(3) {
+    order: 4;
+  }
+  .excellence-desc {
+    padding: 0;
+  }
+  .vt-breadcrumb {
+    gap: 11px;
+    font-size: 14px;
+    padding: 25px 15px;
+  }
+  #s2 .box-number {
+    margin-bottom: 0;
+    margin-top: 20px;
+  }
+  #s2 .box-hocbong .box-text p {
+    margin-bottom: 21px;
+  }
+  #s3 {
+    padding: 60px 0 52px 0;
+  }
+  #s3 .title p {
+    top: 0;
+  }
+  #s3 .title svg {
+    opacity: 0;
+  }
+  #s3 .title-small {
+    padding: 15px 0 45px 0;
+  }
+  #s3 .title-small p {
+    font-size: 18px;
+    padding: 0px 15px;
+  }
+  #s3 .box-card {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 15px;
+  }
+  #s4 .title-small p {
+    padding: 0 23px;
+  }
+  #s4 .title-small {
+    padding: 0;
+  }
+  #s4 .title-small p::before {
+    left: 2px;
+    opacity: 0;
+  }
+  #s4 .title-small p::after {
+    opacity: 0;
+  }
+  #s4 .box-responsibility {
+    margin-top: 43px;
+    gap: 44px;
+    flex-wrap: wrap;
+  }
+  #s4 .box-responsibility .box-text {
+    width: 100%;
+    padding: 20px;
+  }
+  #s4 .box-responsibility .box-text .before {
+    opacity: 0;
+  }
+  #s4 .box-responsibility img {
+    margin: 0 auto;
+  }
+  #s4 .responsibility {
+    padding: 0;
+  }
+  .owl-dots {
+    opacity: 0;
+  }
+}/*# sourceMappingURL=scholarship_excellence.css.map */
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <section id="s1" class="banner-top position-relative">
+        <div class="owl-carousel owl-theme">
+          <div class="item">
+            <div class="box-img">
+              <img
+                src="images/img_slide_banner_1.png"
+                class="banner-logo"
+              />
+            </div>
+          </div>
+          <div class="item">
+            <div class="box-img">
+              <img
+                src="images/img_slide_banner_2.png"
+                class="banner-logo"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="vt-breadcrumb container">
+        <div class="dot-nav">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="5"
+            viewBox="0 0 25 5"
+            fill="none"
+          >
+            <circle cx="2.5" cy="2.5" r="2.5" fill="#EA0033" />
+            <circle cx="22.5" cy="2.5" r="2.5" fill="#EA0033" />
+            <circle cx="12.5" cy="2.5" r="2.5" fill="#EA0033" />
+          </svg>
+        </div>
+        <p>Dành cho nhân sự viettel xuất sắc</p>
+      </div>
+
+      <section id="s2">
+        <div class="container">
+          <div class="row mb-2">
+            <img src="images/icon_viettel.png" alt="" />
+          </div>
+
+          <div class="row justify-content-between align-items-center title-tab">
+            <p class="title">TECH FORWARD</p>
+            <ul class="tab">
+              <li>
+                <a href="#">Viettel dx excellence</a>
+              </li>
+              <li>
+                <a href="#">Viettel future leaders</a>
+              </li>
+              <li>
+                <a href="#">Viettel global talent</a>
+              </li>
+              <li>
+                <img src="images/icon_tab-dot.svg" id="toggleButton" />
+              </li>
+            </ul>
+            <div id="content" class="box-popup hidden-popup">
+              <div>
+                <p>Dành cho</p>
+                <p>Ứng viên bên ngoài Viettel</p>
+              </div>
+              <ul>
+                <li>
+                  <a href="#">1. Viettel research excellence</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 col-12">
+              <div class="box-img">
+                <img src="images/img_excellence.png" alt="" />
+              </div>
+            </div>
+            <div class="col-md-6 col-12 excellence-desc">
+              <p>
+                Học bổng CTĐT Thạc sỹ nhằm nâng cao trình độ chuyên môn nghiệp vụ dành cho CBNV Viettel là nhân sự xuất sắc, được quy hoạch nắm giữ các vị trí chủ chốt trong lĩnh vực nghiên cứu công nghệ cao và điện tử viễn thông.
+              </p>
+              <p>
+                CBNV có cơ hội được lựa chọn các chương trình đào tạo Thạc sỹ chất lượng cao trong các lĩnh vực viễn thông, NCSX (ưu tiên lĩnh vực vệ tinh, hàng không vũ trụ, năng lượng, Cloud, 5G,...) của các trường được xếp hạng Top200 theo QS World University Rankings; hoặc chương trình đào tạo liên kết top đầu tại Việt Nam – cấp bằng quốc tế
+              </p>
+              <div class="row no-gutters box-hocbong">
+                <div class="col-md-6 col-12">
+                  <div class="box-number">
+                    <span class="number">3</span>
+                    <span class="number-desc"
+                      >suất học bổng tại nước ngoài</span
+                    >
+                  </div>
+                  <div class="box-text">
+                    <p>Giá trị <b>2,5 tỷ VNĐ</b>/suất/năm</p>
+                  </div>
+                </div>
+                <div class="col-md-6 col-12">
+                  <div class="box-number">
+                    <span class="number number-1">10</span>
+                    <span class="number-desc">suất học bổng trong nước</span>
+                  </div>
+                  <div class="box-text">
+                    <p>Giá trị <b>100 triệu VNĐ</b>/suất/năm</p>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <a href="#" class="btn-apply">
+                    Apply now
+                    <img src="images/icon_button-right.svg" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="s3">
+        <div class="title">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="849"
+            height="38"
+            viewBox="0 0 849 38"
+            fill="none"
+          >
+            <path
+              d="M564 37.5V38H564.207L564.354 37.8536L564 37.5ZM598.5 3V2.5H598.293L598.146 2.64645L598.5 3ZM843.333 3C843.333 4.47276 844.527 5.66667 846 5.66667C847.473 5.66667 848.667 4.47276 848.667 3C848.667 1.52724 847.473 0.333333 846 0.333333C844.527 0.333333 843.333 1.52724 843.333 3ZM0 38H564V37H0V38ZM564.354 37.8536L598.854 3.35355L598.146 2.64645L563.646 37.1464L564.354 37.8536ZM598.5 3.5H846V2.5H598.5V3.5Z"
+              fill="#EA0033"
+            />
+          </svg>
+          <p>Đối tượng</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="849"
+            height="38"
+            viewBox="0 0 849 38"
+            fill="none"
+          >
+            <path
+              d="M285 37.5V38H284.793L284.646 37.8536L285 37.5ZM250.5 3V2.5H250.707L250.854 2.64645L250.5 3ZM6.16669 3C6.16669 4.47276 4.97278 5.66667 3.5 5.66667C2.02722 5.66667 0.833313 4.47276 0.833313 3C0.833313 1.52724 2.02722 0.333333 3.5 0.333333C4.97278 0.333333 6.16669 1.52724 6.16669 3ZM849 38H285V37H849V38ZM284.646 37.8536L250.146 3.35355L250.854 2.64645L285.354 37.1464L284.646 37.8536ZM250.5 3.5H3.5V2.5H250.5V3.5Z"
+              fill="#EA0033"
+            />
+          </svg>
+        </div>
+        <div class="title-small">
+          <p>
+            CBQL hoặc nhân sự đang nắm giữ các vị trí chủ chốt về công nghệ mới trong viễn thông (5G, 6G, IoT, Cloud) hoặc nghiên cứu công nghệ cao, có tác động lớn/trực tiếp tới việc thực thi các chiến lược nghiên cứu, phát triển sản phẩm của Tập đoàn trong ngắn và dài hạn; hoặc nhân sự được quy hoạch nắm giữ các vị trí chủ chốt về công nghệ tại các CQĐV thuộc Công ty Mẹ - Tập đoàn
+          </p>
+        </div>
+
+        <div class="container box-card">
+          <div class="card-1">
+            <div class="icon">
+              <img src="images/icon_object_target_1.svg" />
+              <div class="line"></div>
+            </div>
+            <div class="icon-text">
+              <p>
+                Có thành tích tốt trong thực hiện nhiệm vụ công việc (Ki năm
+                liền trước xếp loại A trở lên)
+              </p>
+            </div>
+          </div>
+          <div class="card-1">
+            <div class="icon">
+              <img src="images/icon_object_target_2.svg" />
+              <div class="line"></div>
+            </div>
+            <div class="icon-text">
+              <p>Là CBQL hoặc chuyên gia bậc HRL 14 trở lên</p>
+            </div>
+          </div>
+          <div class="card-1">
+            <div class="icon">
+              <img src="images/icon_object_target_3.svg" />
+              <div class="line"></div>
+            </div>
+            <div class="icon-text">
+              <p>
+                Đối với CBNV ứng tuyển học bổng nước ngoài: yêu cầu thâm niên
+                công tác tại Viettel từ 3 năm trở lên; TOEIC 800+
+              </p>
+            </div>
+          </div>
+          <div class="card-1">
+            <div class="icon">
+              <img src="images/icon_object_target_4.png" />
+              <div class="line"></div>
+            </div>
+            <div class="icon-text">
+              <p>
+                Đối với CBNV ứng tuyển học bổng trong nước: yêu cầu thâm niên
+                công tác tại Viettel từ 2 năm trở lên, TOEIC 650+
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="s4">
+        <div class="title-small">
+          <p>Quyền lợi & trách nhiệm</p>
+        </div>
+
+        <div class="row container responsibility">
+          <div class="col-md-6 col-12">
+            <div class="box-responsibility">
+              <img src="images/icon_responsibility_1.svg" alt="" />
+              <div class="box-text col-left">
+                <p>
+                  CBNV được Tập đoàn chi trả toàn bộ hoặc một phần chi phí đào
+                  tạo:
+                </p>
+                <ul>
+                  <li>Học phí</li>
+                  <li>
+                    Chi phí ăn ở, sinh hoạt, đi lại trong thời gian du học
+                  </li>
+                  <li>Lương và phụ cấp theo quy định</li>
+                </ul>
+                <div class="before">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="56" height="53" viewBox="0 0 56 53" fill="none">
+                        <path d="M55.5 0.5H1C12.5 6.83333 35.5 26.1 35.5 52.5" stroke="#D9D9D9"/>
+                      </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-12">
+            <div class="box-responsibility">
+              <img src="images/icon_responsibility_2.svg" alt="" />
+              <div class="box-text col-right">
+                <p>
+                  <img src="images/icon_tick.svg" alt="" />
+                </p>
+                <p>
+                    CBNV phải hoàn thành CTĐT và được nhận bằng tốt nghiệp
+                </p>
+                <p>
+                  <img src="images/icon_tick.svg" alt="" />
+                </p>
+                <p>
+                    Cam kết thời gian làm việc cho Tập đoàn sau khi tốt nghiệp theo quy định tại Quy chế học tập và đào tạo tại Công ty Mẹ
+                </p>
+                <div class="before">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="56" height="53" viewBox="0 0 56 53" fill="none">
+                        <path d="M55.5 0.5H1C12.5 6.83333 35.5 26.1 35.5 52.5" stroke="#D9D9D9"/>
+                      </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="footer-block1">
+        <div class="container text-center">
+            <p class="title">
+                chắp cánh tài năng công nghệ số việt nam
+            </p>
+
+            <div class="box-round">
+                <div class="round">
+                    <div class="box-img">
+                        <img src="images/icon_round_1.svg">
+                    </div>
+                    <div class="box-text">
+                        <p>Vòng sơ loại</p>
+                    </div>
+                </div>
+                <div class="round">
+                    <div class="box-img">
+                        <img src="images/icon_round_2.svg">
+                    </div>
+                    <div class="box-text">
+                        <p>Vòng phỏng vấn</p>
+                    </div>
+                </div>
+                <div class="round">
+                    <div class="box-img">
+                        <img src="images/icon_round_3.svg">
+                    </div>
+                    <div class="box-text">
+                        <p>Thông báo kết quả & Trao tặng học bổng</p>
+                    </div>
+                </div>
+                <div class="line-dot">
+                    <div class="box-line">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <img src="images/icon_round_4.svg">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                    <div class="box-line">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <img src="images/icon_round_4.svg">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="btn-apply">
+                Ứng tuyển ngay
+                <img src="images/icon_button-right_1.svg">
+            </a>
+        </div>
+    </div>
+
+      <div class="apply-now">
+        <img src="assets//images/icon_applyNow.svg" />
+      </div>
+    </main>
+
+    <script>
+      $(function () {
+        // Owl Carousel
+        var owl = $(".owl-carousel");
+        owl.owlCarousel({
+          items: 1,
+          margin: 0,
+          loop: true,
+          nav: false,
+        });
+      });
+
+      $(document).ready(function () {
+        var $toggleButton = $("#toggleButton");
+        var $content = $("#content");
+        $toggleButton.on("click", function () {
+          $content.toggle();
+        });
+        $(document).on("click", function (e) {
+          if (
+            !$toggleButton.is(e.target) &&
+            !$content.is(e.target) &&
+            $content.has(e.target).length === 0
+          ) {
+            $content.hide();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

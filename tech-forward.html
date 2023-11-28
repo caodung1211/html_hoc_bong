@@ -82,39 +82,16 @@
               <li>
                 <a href="#">Viettel global talent</a>
               </li>
-              <li id="showPopupExcellence">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="43"
-                  height="43"
-                  viewBox="0 0 43 43"
-                  fill="none"
-                >
-                  <circle
-                    cx="21.5"
-                    cy="21.5"
-                    r="20.5"
-                    fill="white"
-                    stroke="#A9A9A9"
-                  />
-                  <circle cx="12" cy="21" r="2.5" fill="#EA0033" />
-                  <circle cx="32" cy="21" r="2.5" fill="#EA0033" />
-                  <circle cx="22" cy="21" r="2.5" fill="#EA0033" />
-                </svg>
+              <li>
+                <img src="assets/images/icon_tab-dot.svg" id="toggleButton" />
               </li>
             </ul>
-            <div class="box-popup" style="display: none">
+            <div id="content" class="box-popup hidden-popup">
               <div>
                 <p>Dành cho</p>
                 <p>Ứng viên bên ngoài Viettel</p>
               </div>
               <ul>
-                <li>
-                  <a href="#">1. Viettel research excellence</a>
-                </li>
-                <li>
-                  <a href="#">1. Viettel research excellence</a>
-                </li>
                 <li>
                   <a href="#">1. Viettel research excellence</a>
                 </li>
@@ -381,14 +358,19 @@
       });
 
       $(document).ready(function () {
-        // $(document).on("click", function (event) {
-        //     if (!$(".box-popup").is(event.target) && $(".box-popup").has(event.target).length === 0) {
-        //         $(".box-popup").hide()
-        //     }
-        // });
-
-        $("#showPopupExcellence").click(function () {
-          $(".box-popup").show();
+        var $toggleButton = $("#toggleButton");
+        var $content = $("#content");
+        $toggleButton.on("click", function () {
+          $content.toggle();
+        });
+        $(document).on("click", function (e) {
+          if (
+            !$toggleButton.is(e.target) &&
+            !$content.is(e.target) &&
+            $content.has(e.target).length === 0
+          ) {
+            $content.hide();
+          }
         });
       });
     </script>
